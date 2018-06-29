@@ -1,0 +1,37 @@
+{
+  "name": "jszip-glob",
+  "version": "0.0.1",
+  "description": "Zip files by pattern",
+  "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/nak2k/node-jszip-glob/issues"
+  },
+  "dependencies": {
+    "glob": "^7.1.2",
+    "run-parallel": "^1.1.9"
+  },
+  "devDependencies": {
+    "jszip": "^3.1.5",
+    "tape": "^4.9.1"
+  },
+  "homepage": "https://github.com/nak2k/node-jszip-glob",
+  "keywords": [
+    "glob",
+    "jszip",
+    "zip"
+  ],
+  "license": "MIT",
+  "main": "lib",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nak2k/node-jszip-glob.git"
+  },
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "test": "tape test/test*.js"
+  },
+  "files": [
+    "README.md",
+    "lib/"
+  ]
+}
