@@ -4,7 +4,7 @@ const JSZip = require('jszip');
 const { dirname } = require('path');
 
 test('test', t => {
-  t.plan(2);
+  t.plan(1);
 
   zipFiles('**/*.js', {
     cwd: dirname(__dirname),
@@ -13,10 +13,10 @@ test('test', t => {
     nosort: true,
     ignore: 'node_modules/**',
     zip: new JSZip(),
-  }, (err, zip) => {
-    t.error(err);
-
+  }).then(zip => {
     const files = zip.file(/\.js$/);
     t.equal(files.length, 2);
+  }).catch(err => {
+    t.error(err);
   });
 });
