@@ -1,6 +1,6 @@
 {
   "name": "jszip-glob",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Zip files by pattern",
   "author": "Kengo Nakatsuka <kengo.nakatsuka@gmail.com>",
   "bugs": {
