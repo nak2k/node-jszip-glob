@@ -1,10 +1,11 @@
 import { promises } from 'fs';
 import { join } from 'path';
 import glob = require('glob');
+import type { IOptions } from 'glob';
 
 const { readFile, stat } = promises;
 
-export interface ZipFilesOptions<T> {
+export interface ZipFilesOptions<T> extends IOptions {
   cwd: string,
   zip: T,
   compression?: 'STORE' | 'DEFLATE';
